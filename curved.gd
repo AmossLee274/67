@@ -20,6 +20,7 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 			if rotation_degrees == (270):
 				print("point left up")
 				positionofpipe = 4
+				pass
 			if rotation_degrees == (0):
 				print("point up right")
 				
