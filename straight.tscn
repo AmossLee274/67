@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ggelo83owabb"]
+
+[ext_resource type="Script" uid="uid://ktcymi10hcwf" path="res://straight.gd" id="1_gh274"]
+[ext_resource type="Texture2D" uid="uid://ba2wrxbr0qtm7" path="res://1.png" id="2_giual"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jtwgc"]
+radius = 111.0
+height = 224.0
+
+[node name="Straight" type="Area2D" unique_id=976443151]
+script = ExtResource("1_gh274")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=948723941]
+texture = ExtResource("2_giual")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=691544041]
+shape = SubResource("CapsuleShape2D_jtwgc")

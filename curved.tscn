@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://be1ffa2lh8g4t"]
+
+[ext_resource type="Script" uid="uid://cl6rl8rrvbxbr" path="res://curved.gd" id="1_1574m"]
+[ext_resource type="Texture2D" uid="uid://b2ypxan6tt2bq" path="res://2.png" id="2_2eg82"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jtwgc"]
+radius = 106.0
+height = 224.0
+
+[node name="Curved" type="Area2D" unique_id=440273220]
+script = ExtResource("1_1574m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1225003464]
+texture = ExtResource("2_2eg82")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1662479323]
+shape = SubResource("CapsuleShape2D_jtwgc")
