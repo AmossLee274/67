@@ -1,19 +1,35 @@
 extends Area2D
 
 var positionofpipe = 1
-var valve = ""
+var up = false
+var down = false
+var left = false
+var right = false
+var connection = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	if positionofpipe == (4):
-		valve = "C, O, C, O"
+		left = false
+		up = true
+		right = false
+		down = true
 	if positionofpipe == (1):
-		valve = "O, C, O, C"
+		left = true
+		up = false
+		right = true
+		down = false
 	if positionofpipe == (2):
-		valve = "C, O, C, O"
+		left = false
+		up = true
+		right = false
+		down = true
 	if positionofpipe == (3):
-		valve = "O, C, O, C"
+		left = true
+		up = false
+		right = true
+		down = false
 		
 	
 	
@@ -36,9 +52,22 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 		if rotation_degrees == (0):
 			print("point up")
 			positionofpipe = 1
+		
+		if left and right == true:
+			connection = true
+		else:
+			connection = false
+		if up and down == true:
+			connection = true
+		else:
+			connection = false
 		print(positionofpipe)
 		print(rotation_degrees)
-		print(valve)
+		if left and right == true:
+			connection = true
+		elif left == false and right == true:
+			connection = false
+		print(connection)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

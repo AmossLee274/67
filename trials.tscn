@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ble05uh640jl1"]
+
+[ext_resource type="PackedScene" uid="uid://ggelo83owabb" path="res://straight.tscn" id="2_qahx8"]
+
+[node name="Node2D" type="Node2D" unique_id=219571352]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=919807969]
+
+[node name="Straight" parent="." unique_id=976443151 instance=ExtResource("2_qahx8")]
+position = Vector2(208, 218)
+
+[node name="Straight2" parent="." unique_id=1760220886 instance=ExtResource("2_qahx8")]
+position = Vector2(432, 219)
