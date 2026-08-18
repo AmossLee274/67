@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://ble05uh640jl1"]
 
+[ext_resource type="Script" uid="uid://bqvq6g58ve5mv" path="res://main.gd" id="1_sp4t2"]
 [ext_resource type="PackedScene" uid="uid://ggelo83owabb" path="res://straight.tscn" id="2_qahx8"]
 
-[node name="Node2D" type="Node2D" unique_id=219571352]
+[node name="Main" type="Node2D" unique_id=219571352]
+script = ExtResource("1_sp4t2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=919807969]
 
