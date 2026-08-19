@@ -11,5 +11,15 @@ script = ExtResource("1_sp4t2")
 [node name="Straight" parent="." unique_id=976443151 instance=ExtResource("2_qahx8")]
 position = Vector2(208, 218)
 
+[node name="Straight3" parent="." unique_id=1351171932 instance=ExtResource("2_qahx8")]
+position = Vector2(208, 439)
+
+[node name="Straight4" parent="." unique_id=118703297 instance=ExtResource("2_qahx8")]
+position = Vector2(432, 439)
+
 [node name="Straight2" parent="." unique_id=1760220886 instance=ExtResource("2_qahx8")]
 position = Vector2(432, 219)
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=687720429]
+offset_right = 1152.0
+offset_bottom = 27.0
