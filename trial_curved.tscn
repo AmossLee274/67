@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bfqj4ueqxkp1f"]
+
+[ext_resource type="PackedScene" uid="uid://be1ffa2lh8g4t" path="res://curved.tscn" id="1_f5akr"]
+[ext_resource type="Script" uid="uid://c21hw185abnp0" path="res://trial_curved.gd" id="1_hknq6"]
+
+[node name="TRIAL CURVED" type="Node2D" unique_id=1302163657]
+script = ExtResource("1_hknq6")
+
+[node name="Curved" parent="." unique_id=440273220 instance=ExtResource("1_f5akr")]
+position = Vector2(437, 305)
+
+[node name="Curved3" parent="." unique_id=414709584 instance=ExtResource("1_f5akr")]
+position = Vector2(437, 528)
+
+[node name="Curved4" parent="." unique_id=334938553 instance=ExtResource("1_f5akr")]
+position = Vector2(661, 528)
+
+[node name="Curved2" parent="." unique_id=414710440 instance=ExtResource("1_f5akr")]
+position = Vector2(661, 305)
