@@ -4,7 +4,7 @@ extends Area2D
 @export var down = false
 @export var left = false
 @export var right = false
-
+@export var grid_position: Vector2i = Vector2i(0, 0)
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:

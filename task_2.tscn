@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://boyusto2f0fca"]
+
+[ext_resource type="Script" uid="uid://dyo3ddlmw0af7" path="res://task_2.gd" id="1_erq8f"]
+[ext_resource type="PackedScene" uid="uid://ggelo83owabb" path="res://straight.tscn" id="2_md183"]
+[ext_resource type="PackedScene" uid="uid://be1ffa2lh8g4t" path="res://curved.tscn" id="3_lfjqd"]
+
+[node name="Task 2" type="Node2D" unique_id=995482434]
+script = ExtResource("1_erq8f")
+
+[node name="Straight" parent="." unique_id=976443151 instance=ExtResource("2_md183")]
+position = Vector2(326, 175)
+
+[node name="Straight2" parent="." unique_id=332857186 instance=ExtResource("2_md183")]
+position = Vector2(553, 175)
+
+[node name="Curved" parent="." unique_id=440273220 instance=ExtResource("3_lfjqd")]
+position = Vector2(330, 400)
+
+[node name="Curved2" parent="." unique_id=1353043811 instance=ExtResource("3_lfjqd")]
+position = Vector2(553, 400)
