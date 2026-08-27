@@ -1,9 +1,9 @@
-
-
 extends Node2D
 
 
 var pipes = []
+
+const GRID_SIZE = 3
 
 
 func find_neighbors(pipe) -> Array:
@@ -39,31 +39,96 @@ func get_clicked_pipe():
 
 	return null
 
+
+# ADDED
+func check_connection(pipe, other_pipe) -> bool:
+	var difference = other_pipe.grid_position - pipe.grid_position
+
+	if difference == Vector2i(-1, 0):
+		return pipe.left and other_pipe.right
+
+	elif difference == Vector2i(1, 0):
+		return pipe.right and other_pipe.left
+
+	elif difference == Vector2i(0, -1):
+		return pipe.up and other_pipe.down
+
+	elif difference == Vector2i(0, 1):
+		return pipe.down and other_pipe.up
+
+	return false
+
+
+func check_puzzle() -> bool:
+	for pipe in pipes:
+
+		var neighbors = find_neighbors(pipe)
+
+		for other_pipe in neighbors:
+
+			if not check_connection(pipe, other_pipe):
+				return false
+
+	return true
+
+
 func _ready() -> void:
+
+
 	$Straight.grid_position = Vector2i(0, -1)
 	$Straight2.grid_position = Vector2i(1, 0)
 	$Curved.grid_position = Vector2i(0, 1)
-	$Curved2.grid_position = Vector2i(-1, 0)
+	$Straight4.grid_position = Vector2i(-1, 0)
 	$Straight3.grid_position = Vector2i(0, 0)
+	$Curved3.grid_position = Vector2i(-1, -1)
+	$Straight5.grid_position = Vector2i(-1, 1)
+	$Curved2.grid_position = Vector2i(1, 1)
+	$Curved4.grid_position = Vector2i(1, -1)
 
-	pipes = [$Straight, $Straight2, $Curved, $Curved2, $Straight3]
+
+	pipes = [$Straight, $Straight2, $Curved, $Curved2, $Straight3, $Curved3, $Straight5, $Curved2, $Curved4]
+
 
 func _process(delta: float) -> void:
-	pass
+
+
+
+	if $Straight.down and $Straight3.up == true:
+		print("connected")
+
+	if $Curved2.right and $Straight3.left == true:
+		print("connected")
+
+	if $Curved.up and $Straight3.down == true:
+		print("connected")
+
+	if $Straight2.left and $Straight3.right == true:
+		print("connected")
+
+
+
+
+
+	if check_puzzle():
+		print("PUZZLE SOLVED!")
 
 
 func _input(event: InputEvent) -> void:
+
 	if event is InputEventMouseButton:
+
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 
 			var clicked_pipe = get_clicked_pipe()
 
 			if clicked_pipe:
+
 				print("Clicked: ", clicked_pipe.name)
 
 				var neighbors = find_neighbors(clicked_pipe)
 
 				for pipe in neighbors:
+
 					var difference = pipe.grid_position - clicked_pipe.grid_position
 
 					if difference == Vector2i(-1, 0):
@@ -77,3 +142,7 @@ func _input(event: InputEvent) -> void:
 
 					elif difference == Vector2i(0, 1):
 						print("Bottom neighbour = ", pipe.grid_position)
+
+					# ADDED
+					if check_connection(clicked_pipe, pipe):
+						print("These pipes are connected!")

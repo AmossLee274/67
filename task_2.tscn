@@ -7,10 +7,6 @@
 [node name="Task 2" type="Node2D" unique_id=995482434]
 script = ExtResource("1_erq8f")
 
-[node name="Straight" parent="." unique_id=976443151 instance=ExtResource("2_md183")]
-position = Vector2(556.99994, 152)
-scale = Vector2(0.77, 0.77)
-
 [node name="Straight2" parent="." unique_id=332857186 instance=ExtResource("2_md183")]
 position = Vector2(728.99994, 323.99997)
 scale = Vector2(0.77, 0.77)
@@ -19,10 +15,30 @@ scale = Vector2(0.77, 0.77)
 position = Vector2(557, 323.99997)
 scale = Vector2(0.77, 0.77)
 
+[node name="Straight4" parent="." unique_id=976443151 instance=ExtResource("2_md183")]
+position = Vector2(384, 324.00003)
+scale = Vector2(0.77, 0.77)
+
+[node name="Straight" parent="." unique_id=1755799660 instance=ExtResource("2_md183")]
+position = Vector2(557, 151.00005)
+scale = Vector2(0.77, 0.77)
+
+[node name="Straight5" parent="." unique_id=1815697566 instance=ExtResource("2_md183")]
+position = Vector2(384.00003, 496)
+scale = Vector2(0.77, 0.77)
+
 [node name="Curved" parent="." unique_id=440273220 instance=ExtResource("3_lfjqd")]
 position = Vector2(556.99994, 495.99997)
 scale = Vector2(0.77, 0.77)
 
-[node name="Curved2" parent="." unique_id=1353043811 instance=ExtResource("3_lfjqd")]
-position = Vector2(385, 324)
+[node name="Curved4" parent="." unique_id=1799509463 instance=ExtResource("3_lfjqd")]
+position = Vector2(729.00006, 496.00003)
+scale = Vector2(0.77, 0.77)
+
+[node name="Curved2" parent="." unique_id=625333788 instance=ExtResource("3_lfjqd")]
+position = Vector2(729.00006, 151.00002)
+scale = Vector2(0.77, 0.77)
+
+[node name="Curved3" parent="." unique_id=1549767154 instance=ExtResource("3_lfjqd")]
+position = Vector2(384.00003, 151.00002)
 scale = Vector2(0.77, 0.77)
