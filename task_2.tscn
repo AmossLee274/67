@@ -8,13 +8,21 @@
 script = ExtResource("1_erq8f")
 
 [node name="Straight" parent="." unique_id=976443151 instance=ExtResource("2_md183")]
-position = Vector2(326, 175)
+position = Vector2(556.99994, 152)
+scale = Vector2(0.77, 0.77)
 
 [node name="Straight2" parent="." unique_id=332857186 instance=ExtResource("2_md183")]
-position = Vector2(553, 175)
+position = Vector2(728.99994, 323.99997)
+scale = Vector2(0.77, 0.77)
+
+[node name="Straight3" parent="." unique_id=765919018 instance=ExtResource("2_md183")]
+position = Vector2(557, 323.99997)
+scale = Vector2(0.77, 0.77)
 
 [node name="Curved" parent="." unique_id=440273220 instance=ExtResource("3_lfjqd")]
-position = Vector2(330, 400)
+position = Vector2(556.99994, 495.99997)
+scale = Vector2(0.77, 0.77)
 
 [node name="Curved2" parent="." unique_id=1353043811 instance=ExtResource("3_lfjqd")]
-position = Vector2(553, 400)
+position = Vector2(385, 324)
+scale = Vector2(0.77, 0.77)
