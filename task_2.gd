@@ -75,6 +75,10 @@ func check_puzzle() -> bool:
 func _ready() -> void:
 
 
+
+
+
+	
 	$Straight.grid_position = Vector2i(0, -1)
 	$Straight2.grid_position = Vector2i(1, 0)
 	$Curved.grid_position = Vector2i(0, 1)
@@ -85,32 +89,32 @@ func _ready() -> void:
 	$Curved2.grid_position = Vector2i(1, 1)
 	$Curved4.grid_position = Vector2i(1, -1)
 
-
 	pipes = [$Straight, $Straight2, $Curved, $Curved2, $Straight3, $Curved3, $Straight5, $Curved2, $Curved4]
+
+var Hasprint = false
+func Complete():
+	print("You have completed the puzzle")
+	Hasprint = true
 
 
 func _process(delta: float) -> void:
-
-
-
-	if $Straight.down and $Straight3.up == true:
-		print("connected")
-
-	if $Curved2.right and $Straight3.left == true:
-		print("connected")
-
-	if $Curved.up and $Straight3.down == true:
-		print("connected")
-
-	if $Straight2.left and $Straight3.right == true:
-		print("connected")
-
-
-
-
-
+	
 	if check_puzzle():
 		print("PUZZLE SOLVED!")
+
+	if Hasprint == true:
+		pass
+
+	if not Hasprint and $Straight5.up == true and $Straight4.up == true and $Curved3.down == true and $Curved3.right == true and $Straight.left == true and $Curved2.left == true and $Curved2.down == true and $Straight2.down == true and $Curved4.up == true and $Curved4.left == true and $Curved.right == true and $Curved.up == true and $Straight3.up == true:
+		Complete()
+
+
+	if $Straight5.up == true and $Straight4.up == true :
+		pass
+	
+
+
+
 
 
 func _input(event: InputEvent) -> void:
