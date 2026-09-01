@@ -59,18 +59,6 @@ func check_connection(pipe, other_pipe) -> bool:
 	return false
 
 
-func check_puzzle() -> bool:
-	for pipe in pipes:
-
-		var neighbors = find_neighbors(pipe)
-
-		for other_pipe in neighbors:
-
-			if not check_connection(pipe, other_pipe):
-				return false
-
-	return true
-
 
 func _ready() -> void:
 
@@ -99,14 +87,12 @@ func Complete():
 
 func _process(delta: float) -> void:
 	
-	if check_puzzle():
-		print("PUZZLE SOLVED!")
 
 	if Hasprint == true:
 		pass
 
 	if not Hasprint and $Straight5.up == true and $Straight4.up == true and $Curved3.down == true and $Curved3.right == true and $Straight.left == true and $Curved2.left == true and $Curved2.down == true and $Straight2.down == true and $Curved4.up == true and $Curved4.left == true and $Curved.right == true and $Curved.up == true and $Straight3.up == true:
-		Complete()
+		print("PUZZLE SOLVED!")
 
 
 	if $Straight5.up == true and $Straight4.up == true :

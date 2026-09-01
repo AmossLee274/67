@@ -1,11 +1,17 @@
 [gd_scene format=3 uid="uid://boyusto2f0fca"]
 
 [ext_resource type="Script" uid="uid://dyo3ddlmw0af7" path="res://task_2.gd" id="1_erq8f"]
+[ext_resource type="Texture2D" uid="uid://dgyj4bijpdyur" path="res://w.png" id="2_lfjqd"]
 [ext_resource type="PackedScene" uid="uid://ggelo83owabb" path="res://straight.tscn" id="2_md183"]
 [ext_resource type="PackedScene" uid="uid://be1ffa2lh8g4t" path="res://curved.tscn" id="3_lfjqd"]
 
 [node name="Task 2" type="Node2D" unique_id=995482434]
 script = ExtResource("1_erq8f")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1056433310]
+position = Vector2(557, 324.5)
+scale = Vector2(0.8888889, 1.5972602)
+texture = ExtResource("2_lfjqd")
 
 [node name="Straight2" parent="." unique_id=332857186 instance=ExtResource("2_md183")]
 position = Vector2(728.99994, 323.99997)
@@ -42,3 +48,83 @@ scale = Vector2(0.77, 0.77)
 [node name="Curved3" parent="." unique_id=1549767154 instance=ExtResource("3_lfjqd")]
 position = Vector2(384.00003, 151.00002)
 scale = Vector2(0.77, 0.77)
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=2055491032]
+position = Vector2(1546.5498, 322.84378)
+scale = Vector2(2.1203954, 1.769007)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=483395074]
+position = Vector2(1577.5499, 324.34378)
+scale = Vector2(2.0260274, 1.7607876)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=844649160]
+position = Vector2(1609.0499, 324.34378)
+scale = Vector2(1.9301369, 1.7607878)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=653577744]
+position = Vector2(1638.5499, 322.84378)
+scale = Vector2(1.8403348, 1.769007)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=758801073]
+position = Vector2(1664.5498, 324.34378)
+scale = Vector2(1.7611871, 1.7607878)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=812464150]
+position = Vector2(1677.0498, 325.34378)
+scale = Vector2(1.7231355, 1.7553083)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D11" type="Sprite2D" parent="." unique_id=1995014074]
+position = Vector2(-296, 317.34375)
+scale = Vector2(1.714155, 1.7991439)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D12" type="Sprite2D" parent="." unique_id=1448213800]
+position = Vector2(-351, 324.00003)
+scale = Vector2(1.714155, 1.7078768)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D13" type="Sprite2D" parent="." unique_id=1507071797]
+position = Vector2(-403.04996, 324.00003)
+scale = Vector2(1.714003, 1.7078768)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D13" unique_id=2016468169]
+position = Vector2(-1505.4656, -2.0493383)
+scale = Vector2(5.682582, 1.0378985)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D14" type="Sprite2D" parent="." unique_id=1939613485]
+position = Vector2(-462, 324.00003)
+scale = Vector2(1.714155, 1.7078768)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D14" unique_id=254762175]
+position = Vector2(-266.60352, 54.45352)
+scale = Vector2(1.714155, 1.7078768)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D14/Sprite2D3" unique_id=1010818720]
+position = Vector2(-266.4784, 44.22589)
+scale = Vector2(1.714155, 1.7078768)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D14/Sprite2D3/Sprite2D3" unique_id=965529986]
+position = Vector2(-262.47083, 79.09093)
+scale = Vector2(1.714155, 1.7078768)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D17" type="Sprite2D" parent="Sprite2D14" unique_id=1305478703]
+position = Vector2(626.2561, -353.65546)
+scale = Vector2(2.0644648, 1)
+texture = ExtResource("2_lfjqd")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Sprite2D14/Sprite2D17" unique_id=1423601931]
+position = Vector2(-1.5258789e-05, 706.13983)
+scale = Vector2(0.9999999, 0.99999994)
+texture = ExtResource("2_lfjqd")
