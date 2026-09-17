@@ -1,3 +1,17 @@
 [gd_scene format=3 uid="uid://bax7hoo1fpavn"]
 
+[ext_resource type="PackedScene" uid="uid://clsolu7wig7h1" path="res://world_map.tscn" id="1_gqhpl"]
+[ext_resource type="PackedScene" uid="uid://r1xyk2hpf2sf" path="res://PLAYER.tscn" id="2_qn1i1"]
+
 [node name="Sprint 2" type="Node2D" unique_id=217706522]
+
+[node name="World Map" parent="." unique_id=1346904236 instance=ExtResource("1_gqhpl")]
+position = Vector2(0, 1)
+
+[node name="CharacterBody2D" parent="." unique_id=1307551701 instance=ExtResource("2_qn1i1")]
+position = Vector2(150, 163)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1939388325]
+zoom = Vector2(5.15, 5.15)
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
